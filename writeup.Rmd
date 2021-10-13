@@ -1,6 +1,6 @@
 ---
-title: "Replication of Study X by Sample & Sample (200x, Psychological Science)"
-author: "Replication Author[s] (contact information)"
+title: "Reproducibility Report for \"On the Precipice of a 'Majority-Minority' America: Perceived Status Threat From the Racial Demographic Shift Affects White Americans’ Political Ideology\" by Craig & Richeson (2014, Psychological Science)"
+author: "Stacia King (staciak@stanford.edu)"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
   html_document:
@@ -10,72 +10,82 @@ output:
       collapsed: false
 ---
 
-<!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
+<!-- Reproducibility reports should all use this template to standardize reporting across projects. These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
 
-##Introduction
+## Introduction
 
-[No abstract is needed.]  Each replication project will have a straightforward, no frills report of the study and results.  These reports will be publicly available as supplementary material for the aggregate report(s) of the project as a whole.  Also, to maximize project integrity, the intro and methods will be written and critiqued in advance of data collection.  Introductions can be just 1-2 paragraphs clarifying the main idea of the original study, the target finding for replication, and any other essential information.  It will NOT have a literature review -- that is in the original publication. You can write both the introduction and the methods in past tense.  
+Craig & Richeson, 2014, used an online experiment to unpack the link between  racial demographic shifts and the endorsement of conservatism in white American moderates. The study found white moderates leaned more conservative after being primed with racial demographic shifts in favor of current minority groups. In this project I will look to see if findings from Study 3, group status threat mediated the relationship between racial demographic shifts and more conservative ideology, replicates. 
 
+**Clarify key analysis of interest here**  
+ANCOVAs with experimental condition as the independent variable and demographic characteristics and baseline political ideology as 
+covariates
 
-##Methods
+### Justification for choice of study
 
-###Power Analysis
-
-Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size.  Considerations of feasibility for selecting planned sample size.
-
-###Planned Sample
-
-Planned sample size and/or termination rule, sampling frame, known demographics if any, preselection rules if any.
-
-###Materials
-
-All materials - can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
-
-###Procedure	
-
-Can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
-
-###Analysis Plan
-
-Can also quote directly, though it is less often spelled out effectively for an analysis strategy section.  The key is to report an analysis strategy that is as close to the original - data cleaning rules, data exclusion rules, covariates, etc. - as possible.  
-
-**Clarify key analysis of interest here**  You can also pre-specify additional analyses you plan to do.
-
-###Differences from Original Study
-
-Explicitly describe known differences in sample, setting, procedure, and analysis plan from original study.  The goal, of course, is to minimize those differences, but differences will inevitably occur.  Also, note whether such differences are anticipated to make a difference based on claims in the original article or subsequent published research on the conditions for obtaining the effect.
-
-### Methods Addendum (Post Data Collection)
-
-You can comment this section out prior to final report with data collection.
-
-#### Actual Sample
-  Sample size, demographics, data exclusions based on rules spelled out in analysis plan
-
-#### Differences from pre-data collection methods plan
-  Any differences from what was described as the original plan, or “none”.
+As a social psychologist in training, my research interests include intergroup and interpersonal conflict resolution. Particularly I am interested in conflict between groups with unequal power dynamics, such as white people and Black people, or minorities in general. *On the Precipice of a \"Majority-Minority\” America: Perceived Status Threat From the Racial Demographic Shift Affects White Americans’ Political Ideology* by Craig & Richeson (2014, Psychological Science) helps explain the relationship between racial and social progress and white backlash now, and potentially in the future.
 
 
-##Results
+### Anticipated challenges
 
+Some anticipated challenges to this replication will be:
+
+* Collecting a similarly gendered sample as the original study, or rather a representative proportion of women moderates
+
+### Links
+
+Project repository (on Github): [craig2021](https://github.com/psych251/craig2021.git)
+
+Original paper (as hosted in your repo): [view pdf](https://github.com/psych251/craig2014/blob/1af6af3af7d70e11185a62bc317543f77e10cde1/original_paper.pdf)
+
+## Methods
+
+### Description of the steps required to reproduce the results
+
+1. Gather necessary stimuli from Open Science Framework.
+
+2. Compile stimuli, demographic, independent, and dependent variable items into a Qualtrics survey.
+
+3. Collect data on Prolific from self-identified white political moderates in the United States
+
+4. Run ANCOVAs with the experimental condition as the independent variable and demographic characteristics and baseline political ideology as covariates
+
+### Differences from original study
+
+The demographics of the sample in this replication attempt will likely be different as described in the Anticipated Challenges section above.
+
+The social climate has varied dramatically in numerous waves and directions since the original study was conducted in 2014. It will be interesting to see how and if social attitudes have changed, and in which ways.
+
+## Project Progress Check 1
+
+### Measure of success
+
+Please describe the outcome measure for the success or failure of your reproduction and how this outcome will be computed.
+
+
+### Pipeline progress
+
+Earlier in this report, you described the steps necessary to reproduce the key result(s) of this study. Please describe your progress on each of these steps (e.g., data preprocessing, model fitting, model evaluation).
+
+
+## Results
 
 ### Data preparation
 
 Data preparation following the analysis plan.
 	
 ```{r include=F}
-###Data Preparation
+### Data Preparation
 
-####Load Relevant Libraries and Functions
+#### Load Relevant Libraries and Functions
 
-####Import data
+#### Import data
 
 #### Data exclusion / filtering
 
 #### Prepare data for analysis - create columns etc.
 ```
 
-### Confirmatory analysis
+### Key analysis
 
 The analyses as specified in the analysis plan.  
 
@@ -87,10 +97,10 @@ Any follow-up analyses desired (not required).
 
 ## Discussion
 
-### Summary of Replication Attempt
+### Summary of Reproduction Attempt
 
-Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+Open the discussion section with a paragraph summarizing the primary result from the key analysis and assess whether you successfully reproduced it, partially reproduced it, or failed to reproduce it.  
 
 ### Commentary
 
-Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
+Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis of the dataset, (b) assessment of the meaning of the successful or unsuccessful reproducibility attempt - e.g., for a failure to reproduce the original findings, are the differences between original and present analyses ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the reproducibility attempt (if you contacted them).  None of these need to be long.
