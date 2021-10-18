@@ -11,7 +11,7 @@
 
 <meta name="author" content="Stacia King (staciak@stanford.edu)" />
 
-<meta name="date" content="2021-10-13" />
+<meta name="date" content="2021-10-17" />
 
 <title>Reproducibility Report for “On the Precipice of a ‘Majority-Minority’ America: Perceived Status Threat From the Racial Demographic Shift Affects White Americans’ Political Ideology” by Craig &amp; Richeson (2014, Psychological Science)</title>
 
@@ -249,7 +249,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Reproducibility Report for “On the Precipice of a ‘Majority-Minority’ America: Perceived Status Threat From the Racial Demographic Shift Affects White Americans’ Political Ideology” by Craig &amp; Richeson (2014, Psychological Science)</h1>
 <h4 class="author">Stacia King (<a href="mailto:staciak@stanford.edu" class="email">staciak@stanford.edu</a>)</h4>
-<h4 class="date">October 13, 2021</h4>
+<h4 class="date">October 17, 2021</h4>
 
 </div>
 
@@ -268,13 +268,14 @@ ANCOVAs with experimental condition as the independent variable and demographic 
 <h3>Anticipated challenges</h3>
 <p>Some anticipated challenges to this replication will be:</p>
 <ul>
-<li>Collecting a similarly gendered sample as the original study, or rather a representative proportion of women moderates</li>
+<li>Collecting a similarly gendered sample as the original study, or rather a representative proportion of women moderates.</li>
 </ul>
 </div>
 <div id="links" class="section level3">
 <h3>Links</h3>
 <p>Project repository (on Github): <a href="https://github.com/psych251/craig2021.git">craig2021</a></p>
 <p>Original paper (as hosted in your repo): <a href="https://github.com/psych251/craig2014/blob/1af6af3af7d70e11185a62bc317543f77e10cde1/original_paper.pdf">view pdf</a></p>
+<p>Open Practice: <a href="https://osf.io/dzv6r/osffiles/PS14_Craig_Richeson_manipulations.pdf/">original stimuli</a></p>
 </div>
 </div>
 <div id="methods" class="section level2">
@@ -298,11 +299,16 @@ ANCOVAs with experimental condition as the independent variable and demographic 
 <h2>Project Progress Check 1</h2>
 <div id="measure-of-success" class="section level3">
 <h3>Measure of success</h3>
-<p>Please describe the outcome measure for the success or failure of your reproduction and how this outcome will be computed.</p>
+<p>The replication will be successful based on whether or not the sample leans more conservative after interacting with the stimuli. Additionally, there will be a full replication if data from the assuaged-threat condition do not lean more conservative after interacting with the stimuli. Differences will be calculated with an ANACOVA tests with the covariates being pre- and post-manipulation political ideology. If the test statistic (F) is significantly greater than the critical value then we’ll conclude a difference.</p>
 </div>
 <div id="pipeline-progress" class="section level3">
 <h3>Pipeline progress</h3>
-<p>Earlier in this report, you described the steps necessary to reproduce the key result(s) of this study. Please describe your progress on each of these steps (e.g., data preprocessing, model fitting, model evaluation).</p>
+<ol style="list-style-type: decimal">
+<li><p>Gather stimuli: <strong>Completed</strong></p></li>
+<li><p>Create Qualtrics survey: <strong><em>In Progress</em></strong></p></li>
+<li><p>Data Collection: Upcoming</p></li>
+<li><p>Analyses: Upcoming</p></li>
+</ol>
 </div>
 </div>
 <div id="results" class="section level2">
@@ -310,12 +316,35 @@ ANCOVAs with experimental condition as the independent variable and demographic 
 <div id="data-preparation" class="section level3">
 <h3>Data preparation</h3>
 <p>Data preparation following the analysis plan.</p>
+<pre class="r"><code>### Data Preparation
+&quot;Ill be importing data via qualtRics package functionality, and cleaning it here.&quot;</code></pre>
+<pre><code>## [1] &quot;Ill be importing data via qualtRics package functionality, and cleaning it here.&quot;</code></pre>
+<pre class="r"><code>#### Load Relevant Libraries and Functions
+
+######Copied from Julies session, dont want to run yet
+# install.packages(&quot;qualtRics&quot;) # comment this out once youve installed
+# library(qualtRics)
+# library(tidyverse)
+
+#### Import data
+
+#qualtricsData &lt;- fetch_survey(surveyID = &quot;SURVEY ID HERE&quot;, force_request = T)
+
+## Save Data to computer
+#write_csv(qualtricsData, &quot;./data/qualtricsData.csv&quot;)
+
+#### Data exclusion / filtering
+&quot;I&#39;ll be excluding outliers(?), and people who do not pass the article comprehension check, or the manipulation check.&quot;</code></pre>
+<pre><code>## [1] &quot;I&#39;ll be excluding outliers(?), and people who do not pass the article comprehension check, or the manipulation check.&quot;</code></pre>
+<pre class="r"><code>#### Prepare data for analysis - create columns etc.</code></pre>
 </div>
-<div id="key-analysis" class="section level3">
-<h3>Key analysis</h3>
-<p>The analyses as specified in the analysis plan.</p>
+<div id="confirmatory-analysis" class="section level3">
+<h3>Confirmatory analysis</h3>
+<p>ANCOVAs with experimental condition as the independent variable and demographic characteristics and baseline political ideology as covariates.</p>
 <p><em>Side-by-side graph with original graph is ideal here</em></p>
-<p>###Exploratory analyses</p>
+</div>
+<div id="exploratory-analyses" class="section level3">
+<h3>Exploratory analyses</h3>
 <p>Any follow-up analyses desired (not required).</p>
 </div>
 </div>

@@ -1,4 +1,4 @@
-name: Publish Document
+name: Document
 title:
 username:
 account: rpubs
@@ -6,6 +6,6 @@ server: rpubs.com
 hostUrl: rpubs.com
 appId: https://api.rpubs.com/api/v1/document/821953/3aa7a2966d7b40e68e98303c7c167040
 bundleId: https://api.rpubs.com/api/v1/document/821953/3aa7a2966d7b40e68e98303c7c167040
-url: http://rpubs.com/staciaking/821953
-when: 1634529056.74355
-lastSyncTime: 1634529056.74355
+url: http://rpubs.com/publish/claim/821953/51d5292dfb5340f3a9652ca6d41d62da
+when: 1634198686.21081
+lastSyncTime: 1634198686.21081

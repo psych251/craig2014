@@ -29,13 +29,15 @@ As a social psychologist in training, my research interests include intergroup a
 
 Some anticipated challenges to this replication will be:
 
-* Collecting a similarly gendered sample as the original study, or rather a representative proportion of women moderates
+* Collecting a similarly gendered sample as the original study, or rather a representative proportion of women moderates.
 
 ### Links
 
 Project repository (on Github): [craig2021](https://github.com/psych251/craig2021.git)
 
 Original paper (as hosted in your repo): [view pdf](https://github.com/psych251/craig2014/blob/1af6af3af7d70e11185a62bc317543f77e10cde1/original_paper.pdf)
+
+Open Practice: [original stimuli](https://osf.io/dzv6r/osffiles/PS14_Craig_Richeson_manipulations.pdf/)
 
 ## Methods
 
@@ -59,12 +61,17 @@ The social climate has varied dramatically in numerous waves and directions sinc
 
 ### Measure of success
 
-Please describe the outcome measure for the success or failure of your reproduction and how this outcome will be computed.
-
+The replication will be successful based on whether or not the sample leans more conservative after interacting with the stimuli. Additionally, there will be a full replication if data from the assuaged-threat condition do not lean more conservative after interacting with the stimuli. Differences will be calculated with an ANACOVA tests with the covariates being pre- and post-manipulation political ideology. If the test statistic (F) is significantly greater than the critical value then we'll conclude a difference.
 
 ### Pipeline progress
 
-Earlier in this report, you described the steps necessary to reproduce the key result(s) of this study. Please describe your progress on each of these steps (e.g., data preprocessing, model fitting, model evaluation).
+1. Gather stimuli: **Completed**
+
+2. Create Qualtrics survey: __*In Progress*__
+
+3. Data Collection: Upcoming
+
+4. Analyses: Upcoming
 
 
 ## Results
@@ -73,25 +80,38 @@ Earlier in this report, you described the steps necessary to reproduce the key r
 
 Data preparation following the analysis plan.
 	
-```{r include=F}
+```{r include=T}
 ### Data Preparation
+"Ill be importing data via qualtRics package functionality, and cleaning it here."
 
 #### Load Relevant Libraries and Functions
 
+######Copied from Julies session, dont want to run yet
+# install.packages("qualtRics") # comment this out once youve installed
+# library(qualtRics)
+# library(tidyverse)
+
 #### Import data
 
+#qualtricsData <- fetch_survey(surveyID = "SURVEY ID HERE", force_request = T)
+
+## Save Data to computer
+#write_csv(qualtricsData, "./data/qualtricsData.csv")
+
 #### Data exclusion / filtering
+"I'll be excluding outliers(?), and people who do not pass the article comprehension check, or the manipulation check."
 
 #### Prepare data for analysis - create columns etc.
 ```
 
-### Key analysis
+### Confirmatory analysis
 
-The analyses as specified in the analysis plan.  
+ANCOVAs with experimental condition as the independent variable and demographic characteristics and baseline political ideology as 
+covariates.
 
 *Side-by-side graph with original graph is ideal here*
 
-###Exploratory analyses
+### Exploratory analyses
 
 Any follow-up analyses desired (not required).  
 
