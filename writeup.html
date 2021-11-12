@@ -11,7 +11,7 @@
 
 <meta name="author" content="Stacia King (staciak@stanford.edu)" />
 
-<meta name="date" content="2021-10-17" />
+<meta name="date" content="2021-11-12" />
 
 <title>Reproducibility Report for “On the Precipice of a ‘Majority-Minority’ America: Perceived Status Threat From the Racial Demographic Shift Affects White Americans’ Political Ideology” by Craig &amp; Richeson (2014, Psychological Science)</title>
 
@@ -249,7 +249,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Reproducibility Report for “On the Precipice of a ‘Majority-Minority’ America: Perceived Status Threat From the Racial Demographic Shift Affects White Americans’ Political Ideology” by Craig &amp; Richeson (2014, Psychological Science)</h1>
 <h4 class="author">Stacia King (<a href="mailto:staciak@stanford.edu" class="email">staciak@stanford.edu</a>)</h4>
-<h4 class="date">October 17, 2021</h4>
+<h4 class="date">November 12, 2021</h4>
 
 </div>
 
@@ -257,9 +257,10 @@ div.tocify {
 <!-- Reproducibility reports should all use this template to standardize reporting across projects. These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>Craig &amp; Richeson, 2014, used an online experiment to unpack the link between racial demographic shifts and the endorsement of conservatism in white American moderates. The study found white moderates leaned more conservative after being primed with racial demographic shifts in favor of current minority groups. In this project I will look to see if findings from Study 3, group status threat mediated the relationship between racial demographic shifts and more conservative ideology, replicates.</p>
+<p>Craig &amp; Richeson, 2014, used an online experiment to unpack the link between racial demographic shifts and the endorsement of conservatism in white American moderates. The study found white Americans leaned more conservative, and supported conservative policies more, after being primed with racial demographic shifts in favor of current minority groups. In this project I will look to see if findings from Study 3a, group status threat mediated the relationship between racial demographic shifts and more conservative ideology, replicates.</p>
 <p><strong>Clarify key analysis of interest here</strong><br />
-ANCOVAs with experimental condition as the independent variable and demographic characteristics and baseline political ideology as covariates</p>
+Study 3A results revealed a main effect of experimental condition on overall policy attitudes, F(2, 161) = 4.92, p = .008, ηp2 = .06.</p>
+<p>I will use ANCOVAs with experimental condition as the independent variable, and demographic characteristics (gender, age, education level) and baseline political ideology as covariates.</p>
 <div id="justification-for-choice-of-study" class="section level3">
 <h3>Justification for choice of study</h3>
 <p>As a social psychologist in training, my research interests include intergroup and interpersonal conflict resolution. Particularly I am interested in conflict between groups with unequal power dynamics, such as white people and Black people, or minorities in general. <em>On the Precipice of a &quot;Majority-Minority” America: Perceived Status Threat From the Racial Demographic Shift Affects White Americans’ Political Ideology</em> by Craig &amp; Richeson (2014, Psychological Science) helps explain the relationship between racial and social progress and white backlash now, and potentially in the future.</p>
@@ -268,14 +269,16 @@ ANCOVAs with experimental condition as the independent variable and demographic 
 <h3>Anticipated challenges</h3>
 <p>Some anticipated challenges to this replication will be:</p>
 <ul>
-<li>Collecting a similarly gendered sample as the original study, or rather a representative proportion of women moderates.</li>
+<li><p>Collecting a similarly gendered sample as the original study, or rather a representative proportion of white American women.</p></li>
+<li><p>Learning how to run a power analysis and an ANCOVA</p></li>
 </ul>
 </div>
 <div id="links" class="section level3">
 <h3>Links</h3>
-<p>Project repository (on Github): <a href="https://github.com/psych251/craig2021.git">craig2021</a></p>
+<p>Project repository (on Github): <a href="https://github.com/psych251/craig2014.git">craig2014</a></p>
 <p>Original paper (as hosted in your repo): <a href="https://github.com/psych251/craig2014/blob/1af6af3af7d70e11185a62bc317543f77e10cde1/original_paper.pdf">view pdf</a></p>
 <p>Open Practice: <a href="https://osf.io/dzv6r/osffiles/PS14_Craig_Richeson_manipulations.pdf/">original stimuli</a></p>
+<p>Survey Link: <a href="https://stanforduniversity.qualtrics.com/jfe/form/SV_bdaehc8gdxxRGJ0">here</a></p>
 </div>
 </div>
 <div id="methods" class="section level2">
@@ -284,28 +287,35 @@ ANCOVAs with experimental condition as the independent variable and demographic 
 <h3>Description of the steps required to reproduce the results</h3>
 <ol style="list-style-type: decimal">
 <li><p>Gather necessary stimuli from Open Science Framework.</p></li>
+<li><p>Follow up with authors about missing study materials</p></li>
 <li><p>Compile stimuli, demographic, independent, and dependent variable items into a Qualtrics survey.</p></li>
-<li><p>Collect data on Prolific from self-identified white political moderates in the United States</p></li>
+<li><p>Conduct a power analysis using the original article’s effect size.</p></li>
+<li><p>Pilot Data to ensure no typos, and proper data is being recorded as expected.</p></li>
+<li><p>Collect data on Prolific from self-identified white United States citizens</p></li>
 <li><p>Run ANCOVAs with the experimental condition as the independent variable and demographic characteristics and baseline political ideology as covariates</p></li>
 </ol>
 </div>
 <div id="differences-from-original-study" class="section level3">
 <h3>Differences from original study</h3>
-<p>The demographics of the sample in this replication attempt will likely be different as described in the Anticipated Challenges section above.</p>
-<p>The social climate has varied dramatically in numerous waves and directions since the original study was conducted in 2014. It will be interesting to see how and if social attitudes have changed, and in which ways.</p>
+<p><strong>In Study Design:</strong></p>
+<p>This study will reflect modern, socially acceptable and inclusive, identity categories. It may also include recreations of the items regarding English national language, same-sex marriage, and prison policy preferences. This study will also be much shorter, excluding many of the related, but non-main-focus items and measures. More specifically, the original study included questions and topics that this study will not, but that might have intensified the priming effect (i.e. religious beliefs, naming specific politicians, feelings on racial groups, etc.).</p>
+<p><strong>In Data:</strong></p>
+<p>The gender demographics of the sample in this replication attempt will likely be different as described in the Anticipated Challenges section above, and considering there are more identity options.</p>
+<p><strong>In the World:</strong></p>
+<p>The social climate has varied drastically in numerous waves and directions since the original study was conducted in 2012. Including, a global pandemic that has altered life as we know it in known and unknown ways. Socially, identities and norms have even changed around race &amp; gender. This study will reflect modern norms, whereas these norms may not have been as prevalent or known at the time of the original experiment. The reality of shifting racial demographics is almost certainly more widely known now, than it was a decade ago, so the racial threat manipulation’s ability to induce group status threat may differ. U.S. citizens, also are not living with a sitting Black president, as was the case when the original study took place, so this may change overall salience of group status threat.</p>
 </div>
 </div>
 <div id="project-progress-check-1" class="section level2">
 <h2>Project Progress Check 1</h2>
 <div id="measure-of-success" class="section level3">
 <h3>Measure of success</h3>
-<p>The replication will be successful based on whether or not the sample leans more conservative after interacting with the stimuli. Additionally, there will be a full replication if data from the assuaged-threat condition do not lean more conservative after interacting with the stimuli. Differences will be calculated with an ANACOVA tests with the covariates being pre- and post-manipulation political ideology. If the test statistic (F) is significantly greater than the critical value then we’ll conclude a difference.</p>
+<p>The replication will be successful based on whether or not there is a main effect of experimental condition on overall policy attitudes after interacting with the stimuli. Additionally, there will be a full replication if data from the assuaged-threat and control condition do not lean more conservative after interacting with the stimuli, but the group status threat condition does. Group differences, main, and interaction effects will be calculated with ANCOVA tests. If the test statistic (F) is significantly greater than the critical value then we’ll conclude a difference.</p>
 </div>
 <div id="pipeline-progress" class="section level3">
 <h3>Pipeline progress</h3>
 <ol style="list-style-type: decimal">
 <li><p>Gather stimuli: <strong>Completed</strong></p></li>
-<li><p>Create Qualtrics survey: <strong><em>In Progress</em></strong></p></li>
+<li><p>Create Qualtrics survey: <strong>Completed</strong></p></li>
 <li><p>Data Collection: Upcoming</p></li>
 <li><p>Analyses: Upcoming</p></li>
 </ol>
@@ -316,36 +326,223 @@ ANCOVAs with experimental condition as the independent variable and demographic 
 <div id="data-preparation" class="section level3">
 <h3>Data preparation</h3>
 <p>Data preparation following the analysis plan.</p>
+<p>G*Power revealed a power analysis of n = 154.</p>
 <pre class="r"><code>### Data Preparation
+
+
 &quot;Ill be importing data via qualtRics package functionality, and cleaning it here.&quot;</code></pre>
 <pre><code>## [1] &quot;Ill be importing data via qualtRics package functionality, and cleaning it here.&quot;</code></pre>
 <pre class="r"><code>#### Load Relevant Libraries and Functions
 
-######Copied from Julies session, dont want to run yet
-# install.packages(&quot;qualtRics&quot;) # comment this out once youve installed
-# library(qualtRics)
-# library(tidyverse)
+library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
+<pre><code>## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.5     v dplyr   1.0.7
+## v tidyr   1.1.4     v stringr 1.4.0
+## v readr   2.0.2     v forcats 0.5.1</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(qualtRics)
+library(car) #to check Homogeneity of Variances &amp; run ANCOVA model</code></pre>
+<pre><code>## Loading required package: carData</code></pre>
+<pre><code>## 
+## Attaching package: &#39;car&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     recode</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     some</code></pre>
+<pre class="r"><code>library(multcomp) #to see if/how groups are different from each other</code></pre>
+<pre><code>## Loading required package: mvtnorm</code></pre>
+<pre><code>## Loading required package: survival</code></pre>
+<pre><code>## Loading required package: TH.data</code></pre>
+<pre><code>## Loading required package: MASS</code></pre>
+<pre><code>## 
+## Attaching package: &#39;MASS&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     select</code></pre>
+<pre><code>## 
+## Attaching package: &#39;TH.data&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:MASS&#39;:
+## 
+##     geyser</code></pre>
+<pre class="r"><code>#### Authenticate API
+
+#qualtrics_api_credentials(api_key = &quot;*Removed because MYOB*&quot;, base_url = &quot;stanforduniversity.ca1.qualtrics.com&quot;, install = T)
 
 #### Import data
 
-#qualtricsData &lt;- fetch_survey(surveyID = &quot;SURVEY ID HERE&quot;, force_request = T)
-
-## Save Data to computer
-#write_csv(qualtricsData, &quot;./data/qualtricsData.csv&quot;)
+qualtricsData &lt;- fetch_survey(surveyID = &quot;SV_bdaehc8gdxxRGJ0&quot;, force_request = T, label = FALSE, convert = FALSE, start_date = &quot;2021-11-11&quot; )</code></pre>
+<pre><code>## 
+  |                                                                            
+  |                                                                      |   0%
+  |                                                                            
+  |======================================================================| 100%</code></pre>
+<pre><code>## 
+## -- Column specification --------------------------------------------------------
+## cols(
+##   .default = col_double(),
+##   StartDate = col_datetime(format = &quot;&quot;),
+##   EndDate = col_datetime(format = &quot;&quot;),
+##   IPAddress = col_logical(),
+##   RecordedDate = col_datetime(format = &quot;&quot;),
+##   ResponseId = col_character(),
+##   RecipientLastName = col_logical(),
+##   RecipientFirstName = col_logical(),
+##   RecipientEmail = col_logical(),
+##   ExternalReference = col_logical(),
+##   DistributionChannel = col_character(),
+##   UserLanguage = col_character(),
+##   ProlificID = col_logical(),
+##   Race1_1 = col_logical(),
+##   Race1_2 = col_logical(),
+##   Race1_4 = col_logical(),
+##   Race1_5 = col_logical(),
+##   Race1_6 = col_logical(),
+##   Race1_6_TEXT = col_logical(),
+##   GenPartyAffiliation_4_TEXT = col_logical(),
+##   purposeAllCond = col_character()
+##   # ... with 19 more columns
+## )
+## i Use `spec()` for the full column specifications.</code></pre>
+<pre><code>## Warning in file.remove(survey.fpath): cannot remove file &#39;C:/Users/staci/
+## AppData/Local/Temp/RtmpCI6U7E/Exact Replication Project.csv&#39;, reason &#39;Permission
+## denied&#39;</code></pre>
+<pre class="r"><code>## Save Data to computer
+write_csv(qualtricsData, &quot;./newData/qualtricsData.csv&quot;)
 
 #### Data exclusion / filtering
-&quot;I&#39;ll be excluding outliers(?), and people who do not pass the article comprehension check, or the manipulation check.&quot;</code></pre>
-<pre><code>## [1] &quot;I&#39;ll be excluding outliers(?), and people who do not pass the article comprehension check, or the manipulation check.&quot;</code></pre>
-<pre class="r"><code>#### Prepare data for analysis - create columns etc.</code></pre>
+&quot;I&#39;ll be excluding mixed-raced white people, people who do not pass the article comprehension check, and people who report having read the stimuli before.&quot;</code></pre>
+<pre><code>## [1] &quot;I&#39;ll be excluding mixed-raced white people, people who do not pass the article comprehension check, and people who report having read the stimuli before.&quot;</code></pre>
+<pre class="r"><code>filteredData = qualtricsData %&gt;% 
+  filter(Consent == &quot;1&quot;, Race1_3 == &quot;1&quot;, Citizen == &quot;1&quot;, primeRepeat != &quot;1&quot;)
+
+# Keep Necessary Columns
+cleanedData = filteredData %&gt;%
+  dplyr::select(c(ProlificID, ConservativeIdeo:GenPartyAffiliation_4_TEXT, statusThreatPercept:GenPolSpectrum, Age:Education, Condition, Sex1))
+
+#### Prepare data for analysis - create columns etc.
+
+# Create Baseline Ideology
+cleanedData = cleanedData %&gt;% 
+  mutate(BaselineIdeo = (ConservativeIdeo + LiberalIdeo)/2)
+
+# Create Composite Politics Score
+## Paper says &quot;responses were standardized and averaged to create composites&quot; so thats what I think I did
+## Standardize Policy Preference Items 7: Mean 4, 2    5:3, 1.4142135623731
+cleanedData = cleanedData %&gt;% 
+  mutate(standardImmCiti = (ImmigrantCitizenship-3)/1.4142135623731, standardImmNum = (ImmigrationNumber - 3)/1.4142135623731, standardMilitary = (MilitaryFund -3)/1.4142135623731, standardAffAct = (AffirmativeAction - 4)/2, standardHealth = (Healthcare - 4)/2, standardEngLang = (EnglishNationalLang - 4)/2, standardMarriage = (MarriageRights - 4)/2, standardPrisons = (Prisons - 4)/2)
+
+# Create Composite Conservative Ideology Score
+cleanedData = cleanedData %&gt;% 
+   mutate(conservativeScore = (standardImmCiti + standardImmNum + standardMilitary + standardAffAct +standardHealth +standardEngLang + standardMarriage + standardPrisons)/8)
+
+### Run Descriptives
+## Summary
+cleanedData %&gt;% 
+  dplyr::select(Condition, Age, Sex1, BaselineIdeo, Education, conservativeScore) %&gt;%
+  summary()</code></pre>
+<pre><code>##   Condition              Age             Sex1        BaselineIdeo
+##  Length:9           Min.   :20.00   Min.   :1.000   Min.   :1.0  
+##  Class :character   1st Qu.:22.00   1st Qu.:1.000   1st Qu.:1.5  
+##  Mode  :character   Median :36.00   Median :2.000   Median :4.5  
+##                     Mean   :36.22   Mean   :1.556   Mean   :4.0  
+##                     3rd Qu.:49.00   3rd Qu.:2.000   3rd Qu.:6.0  
+##                     Max.   :59.00   Max.   :2.000   Max.   :7.0  
+##    Education     conservativeScore 
+##  Min.   :2.000   Min.   :-0.32766  
+##  1st Qu.:3.000   1st Qu.:-0.02589  
+##  Median :5.000   Median : 0.33839  
+##  Mean   :4.556   Mean   : 0.23135  
+##  3rd Qu.:6.000   3rd Qu.: 0.48928  
+##  Max.   :7.000   Max.   : 0.71783</code></pre>
+<pre class="r"><code>## Mean &amp; SD
+cleanedData %&gt;% 
+  group_by(Condition) %&gt;% 
+  summarise(meanCScore = mean(conservativeScore), sdCScore = sd(conservativeScore))</code></pre>
+<pre><code>## # A tibble: 3 x 3
+##   Condition       meanCScore sdCScore
+##   &lt;chr&gt;                &lt;dbl&gt;    &lt;dbl&gt;
+## 1 Assuaged Threat     0.246     0.499
+## 2 Control             0.503     0.195
+## 3 Status Threat      -0.0554    0.171</code></pre>
+<pre class="r"><code>## Visualize Data
+boxplot(conservativeScore ~ Condition, data = cleanedData, main = &quot;Score by Condition&quot;, xlab = &quot;Condition&quot;, ylab = &quot;Conservative Score&quot;)</code></pre>
+<p><img src="data:image/png;base64,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" width="672" /></p>
+<pre class="r"><code>## Check Assumptions
+
+&quot;1. The covariate(s) and the treatment are independent&quot;</code></pre>
+<pre><code>## [1] &quot;1. The covariate(s) and the treatment are independent&quot;</code></pre>
+<pre class="r"><code>## AKA models are significantly different
+
+ageModel &lt;- aov(Age ~ Condition, data = cleanedData)
+summary(ageModel)</code></pre>
+<pre><code>##             Df Sum Sq Mean Sq F value Pr(&gt;F)
+## Condition    2  337.6   168.8   0.715  0.527
+## Residuals    6 1416.0   236.0</code></pre>
+<pre class="r"><code>sexModel &lt;- aov(Sex1 ~ Condition, data = cleanedData)
+summary(sexModel)</code></pre>
+<pre><code>##             Df Sum Sq Mean Sq F value Pr(&gt;F)
+## Condition    2 0.8889  0.4444       2  0.216
+## Residuals    6 1.3333  0.2222</code></pre>
+<pre class="r"><code>baseIdeoModel &lt;- aov(BaselineIdeo ~ Condition, data = cleanedData)
+summary(baseIdeoModel)</code></pre>
+<pre><code>##             Df Sum Sq Mean Sq F value Pr(&gt;F)  
+## Condition    2  30.17  15.083   3.719  0.089 .
+## Residuals    6  24.33   4.056                 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>educationModel &lt;- aov(Education ~ Condition, data = cleanedData)
+summary(educationModel)</code></pre>
+<pre><code>##             Df Sum Sq Mean Sq F value Pr(&gt;F)
+## Condition    2  13.56   6.778    2.44  0.168
+## Residuals    6  16.67   2.778</code></pre>
+<pre class="r"><code>&quot;2. Verify the variances among the groups are not equal&quot;</code></pre>
+<pre><code>## [1] &quot;2. Verify the variances among the groups are not equal&quot;</code></pre>
+<pre class="r"><code>leveneTest(conservativeScore ~ Condition, data = cleanedData)</code></pre>
+<pre><code>## Warning in leveneTest.default(y = y, group = group, ...): group coerced to
+## factor.</code></pre>
+<pre><code>## Levene&#39;s Test for Homogeneity of Variance (center = median)
+##       Df F value Pr(&gt;F)
+## group  2  0.4342 0.6666
+##        6</code></pre>
 </div>
 <div id="confirmatory-analysis" class="section level3">
 <h3>Confirmatory analysis</h3>
 <p>ANCOVAs with experimental condition as the independent variable and demographic characteristics and baseline political ideology as covariates.</p>
-<p><em>Side-by-side graph with original graph is ideal here</em></p>
+<pre class="r"><code>## Run ANCOVA Analysis
+
+ancovaModel &lt;- aov(conservativeScore ~ Condition + Age + BaselineIdeo + Sex1  + Education, data = cleanedData)
+Anova(ancovaModel, type=&quot;III&quot;)</code></pre>
+<pre><code>## Anova Table (Type III tests)
+## 
+## Response: conservativeScore
+##                Sum Sq Df F value Pr(&gt;F)
+## (Intercept)  0.029295  1  0.2810 0.6490
+## Condition    0.049164  2  0.2358 0.8092
+## Age          0.112881  1  1.0830 0.4073
+## BaselineIdeo 0.007694  1  0.0738 0.8113
+## Sex1         0.025498  1  0.2446 0.6699
+## Education    0.010729  1  0.1029 0.7788
+## Residuals    0.208467  2</code></pre>
+<pre class="r"><code>#Calculate partial eta squared by hand or??</code></pre>
+<p><em>Side-by-side graph with original graph is ideal here</em> There is no original graph.</p>
 </div>
 <div id="exploratory-analyses" class="section level3">
 <h3>Exploratory analyses</h3>
 <p>Any follow-up analyses desired (not required).</p>
+<pre class="r"><code>## How to tell which groups are different from each other
+
+#General Linear Hypotheses Tests - Simultaneous
+#Multiple Comparisons of Means: Tukey Contrasts
+
+#Doesnt work Error Code: &quot;Error in mcp2matrix(model, linfct = linfct):   Variable(s) ‘Condition’ of class ‘character’ is/are not contained as a factor in ‘model’.&quot;
+
+#postHocs &lt;-glht(ancovaModel, linfct = mcp(technique = &quot;Tukey&quot;))
+#summary(postHocs)</code></pre>
 </div>
 </div>
 <div id="discussion" class="section level2">

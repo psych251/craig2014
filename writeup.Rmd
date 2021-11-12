@@ -14,11 +14,12 @@ output:
 
 ## Introduction
 
-Craig & Richeson, 2014, used an online experiment to unpack the link between  racial demographic shifts and the endorsement of conservatism in white American moderates. The study found white moderates leaned more conservative after being primed with racial demographic shifts in favor of current minority groups. In this project I will look to see if findings from Study 3, group status threat mediated the relationship between racial demographic shifts and more conservative ideology, replicates. 
+Craig & Richeson, 2014, used an online experiment to unpack the link between  racial demographic shifts and the endorsement of conservatism in white American moderates. The study found white Americans leaned more conservative, and supported conservative policies more, after being primed with racial demographic shifts in favor of current minority groups. In this project I will look to see if findings from Study 3a, group status threat mediated the relationship between racial demographic shifts and more conservative ideology, replicates. 
 
 **Clarify key analysis of interest here**  
-ANCOVAs with experimental condition as the independent variable and demographic characteristics and baseline political ideology as 
-covariates
+Study 3A results revealed a main effect of experimental condition on overall policy attitudes, F(2, 161) = 4.92, p = .008, ηp2 = .06.
+
+I will use ANCOVAs with experimental condition as the independent variable, and demographic characteristics (gender, age, education level) and baseline political ideology as covariates.
 
 ### Justification for choice of study
 
@@ -29,15 +30,20 @@ As a social psychologist in training, my research interests include intergroup a
 
 Some anticipated challenges to this replication will be:
 
-* Collecting a similarly gendered sample as the original study, or rather a representative proportion of women moderates.
+* Collecting a similarly gendered sample as the original study, or rather a representative proportion of white American women.
+
+
+* Learning how to run a power analysis and an ANCOVA  
 
 ### Links
 
-Project repository (on Github): [craig2021](https://github.com/psych251/craig2021.git)
+Project repository (on Github): [craig2014](https://github.com/psych251/craig2014.git)
 
 Original paper (as hosted in your repo): [view pdf](https://github.com/psych251/craig2014/blob/1af6af3af7d70e11185a62bc317543f77e10cde1/original_paper.pdf)
 
 Open Practice: [original stimuli](https://osf.io/dzv6r/osffiles/PS14_Craig_Richeson_manipulations.pdf/)
+
+Survey Link: [here](https://stanforduniversity.qualtrics.com/jfe/form/SV_bdaehc8gdxxRGJ0)
 
 ## Methods
 
@@ -45,29 +51,44 @@ Open Practice: [original stimuli](https://osf.io/dzv6r/osffiles/PS14_Craig_Riche
 
 1. Gather necessary stimuli from Open Science Framework.
 
-2. Compile stimuli, demographic, independent, and dependent variable items into a Qualtrics survey.
+2. Follow up with authors about missing study materials
 
-3. Collect data on Prolific from self-identified white political moderates in the United States
+3. Compile stimuli, demographic, independent, and dependent variable items into a Qualtrics survey.
 
-4. Run ANCOVAs with the experimental condition as the independent variable and demographic characteristics and baseline political ideology as covariates
+4. Conduct a power analysis using the original article's effect size.
+
+5. Pilot Data to ensure no typos, and proper data is being recorded as expected.
+
+6. Collect data on Prolific from self-identified white United States citizens
+
+7. Run ANCOVAs with the experimental condition as the independent variable and demographic characteristics and baseline political ideology as covariates
 
 ### Differences from original study
 
-The demographics of the sample in this replication attempt will likely be different as described in the Anticipated Challenges section above.
+**In Study Design:**
 
-The social climate has varied dramatically in numerous waves and directions since the original study was conducted in 2014. It will be interesting to see how and if social attitudes have changed, and in which ways.
+This study will reflect modern, socially acceptable and inclusive, identity categories. It may also include recreations of the items regarding English national language, same-sex marriage, and prison policy preferences. This study will also be much shorter, excluding many of the related, but non-main-focus items and measures. More specifically, the original study included questions and topics that this study will not, but that might have intensified the priming effect (i.e. religious beliefs, naming specific politicians, feelings on racial groups, etc.).
+
+**In Data:**
+
+The gender demographics of the sample in this replication attempt will likely be different as described in the Anticipated Challenges section above, and considering there are more identity options.
+
+**In the World:**
+
+The social climate has varied drastically in numerous waves and directions since the original study was conducted in 2012. Including, a global pandemic that has altered life as we know it in known and unknown ways. Socially, identities and norms have even changed around race & gender. This study will reflect modern norms, whereas these norms may not have been as prevalent or known at the time of the original experiment. The reality of shifting racial demographics is almost certainly more widely known now, than it was a decade ago, so the racial threat manipulation's ability to induce group status threat may differ. U.S. citizens, also are not living with a sitting Black president, as was the case when the original study took place, so this may change overall salience of group status threat.
+
 
 ## Project Progress Check 1
 
 ### Measure of success
 
-The replication will be successful based on whether or not the sample leans more conservative after interacting with the stimuli. Additionally, there will be a full replication if data from the assuaged-threat condition do not lean more conservative after interacting with the stimuli. Differences will be calculated with an ANACOVA tests with the covariates being pre- and post-manipulation political ideology. If the test statistic (F) is significantly greater than the critical value then we'll conclude a difference.
+The replication will be successful based on whether or not there is a main effect of experimental condition on overall policy attitudes after interacting with the stimuli. Additionally, there will be a full replication if data from the assuaged-threat and control condition do not lean more conservative after interacting with the stimuli, but the group status threat condition does. Group differences, main, and interaction effects will be calculated with ANCOVA tests. If the test statistic (F) is significantly greater than the critical value then we'll conclude a difference.
 
 ### Pipeline progress
 
 1. Gather stimuli: **Completed**
 
-2. Create Qualtrics survey: __*In Progress*__
+2. Create Qualtrics survey: **Completed**
 
 3. Data Collection: Upcoming
 
@@ -79,29 +100,95 @@ The replication will be successful based on whether or not the sample leans more
 ### Data preparation
 
 Data preparation following the analysis plan.
+
+G*Power revealed a power analysis of n = 154.
 	
 ```{r include=T}
 ### Data Preparation
+
+
 "Ill be importing data via qualtRics package functionality, and cleaning it here."
 
 #### Load Relevant Libraries and Functions
 
-######Copied from Julies session, dont want to run yet
-# install.packages("qualtRics") # comment this out once youve installed
-# library(qualtRics)
-# library(tidyverse)
+library(tidyverse)
+library(qualtRics)
+library(car) #to check Homogeneity of Variances & run ANCOVA model
+library(multcomp) #to see if/how groups are different from each other
+
+#### Authenticate API
+
+#qualtrics_api_credentials(api_key = "*Removed because MYOB*", base_url = "stanforduniversity.ca1.qualtrics.com", install = T)
 
 #### Import data
 
-#qualtricsData <- fetch_survey(surveyID = "SURVEY ID HERE", force_request = T)
+qualtricsData <- fetch_survey(surveyID = "SV_bdaehc8gdxxRGJ0", force_request = T, label = FALSE, convert = FALSE, start_date = "2021-11-11" )
 
 ## Save Data to computer
-#write_csv(qualtricsData, "./data/qualtricsData.csv")
+write_csv(qualtricsData, "./newData/qualtricsData.csv")
 
 #### Data exclusion / filtering
-"I'll be excluding outliers(?), and people who do not pass the article comprehension check, or the manipulation check."
+"I'll be excluding mixed-raced white people, people who do not pass the article comprehension check, and people who report having read the stimuli before."
+
+filteredData = qualtricsData %>% 
+  filter(Consent == "1", Race1_3 == "1", Citizen == "1", primeRepeat != "1")
+
+# Keep Necessary Columns
+cleanedData = filteredData %>%
+  dplyr::select(c(ProlificID, ConservativeIdeo:GenPartyAffiliation_4_TEXT, statusThreatPercept:GenPolSpectrum, Age:Education, Condition, Sex1))
 
 #### Prepare data for analysis - create columns etc.
+
+# Create Baseline Ideology
+cleanedData = cleanedData %>% 
+  mutate(BaselineIdeo = (ConservativeIdeo + LiberalIdeo)/2)
+
+# Create Composite Politics Score
+## Paper says "responses were standardized and averaged to create composites" so thats what I think I did
+## Standardize Policy Preference Items 7: Mean 4, 2    5:3, 1.4142135623731
+cleanedData = cleanedData %>% 
+  mutate(standardImmCiti = (ImmigrantCitizenship-3)/1.4142135623731, standardImmNum = (ImmigrationNumber - 3)/1.4142135623731, standardMilitary = (MilitaryFund -3)/1.4142135623731, standardAffAct = (AffirmativeAction - 4)/2, standardHealth = (Healthcare - 4)/2, standardEngLang = (EnglishNationalLang - 4)/2, standardMarriage = (MarriageRights - 4)/2, standardPrisons = (Prisons - 4)/2)
+
+# Create Composite Conservative Ideology Score
+cleanedData = cleanedData %>% 
+   mutate(conservativeScore = (standardImmCiti + standardImmNum + standardMilitary + standardAffAct +standardHealth +standardEngLang + standardMarriage + standardPrisons)/8)
+
+### Run Descriptives
+## Summary
+cleanedData %>% 
+  dplyr::select(Condition, Age, Sex1, BaselineIdeo, Education, conservativeScore) %>%
+  summary()
+
+## Mean & SD
+cleanedData %>% 
+  group_by(Condition) %>% 
+  summarise(meanCScore = mean(conservativeScore), sdCScore = sd(conservativeScore))
+
+## Visualize Data
+boxplot(conservativeScore ~ Condition, data = cleanedData, main = "Score by Condition", xlab = "Condition", ylab = "Conservative Score")
+
+## Check Assumptions
+
+"1. The covariate(s) and the treatment are independent"
+## AKA models are significantly different
+
+ageModel <- aov(Age ~ Condition, data = cleanedData)
+summary(ageModel)
+
+sexModel <- aov(Sex1 ~ Condition, data = cleanedData)
+summary(sexModel)
+
+baseIdeoModel <- aov(BaselineIdeo ~ Condition, data = cleanedData)
+summary(baseIdeoModel)
+
+educationModel <- aov(Education ~ Condition, data = cleanedData)
+summary(educationModel)
+
+"2. Verify the variances among the groups are not equal"
+
+leveneTest(conservativeScore ~ Condition, data = cleanedData)
+
+
 ```
 
 ### Confirmatory analysis
@@ -109,11 +196,36 @@ Data preparation following the analysis plan.
 ANCOVAs with experimental condition as the independent variable and demographic characteristics and baseline political ideology as 
 covariates.
 
+```{r Conirmatory Analysis}
+## Run ANCOVA Analysis
+
+ancovaModel <- aov(conservativeScore ~ Condition + Age + BaselineIdeo + Sex1  + Education, data = cleanedData)
+Anova(ancovaModel, type="III")
+
+#Calculate partial eta squared by hand or??
+```
+
 *Side-by-side graph with original graph is ideal here*
+There is no original graph.
 
 ### Exploratory analyses
 
 Any follow-up analyses desired (not required).  
+
+```{r}
+## How to tell which groups are different from each other
+
+#General Linear Hypotheses Tests - Simultaneous
+#Multiple Comparisons of Means: Tukey Contrasts
+
+#Doesnt work Error Code: "Error in mcp2matrix(model, linfct = linfct):   Variable(s) ‘Condition’ of class ‘character’ is/are not contained as a factor in ‘model’."
+
+#postHocs <-glht(ancovaModel, linfct = mcp(technique = "Tukey"))
+#summary(postHocs)
+
+```
+
+
 
 ## Discussion
 
