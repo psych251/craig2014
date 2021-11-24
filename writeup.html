@@ -11,7 +11,7 @@
 
 <meta name="author" content="Stacia King (staciak@stanford.edu)" />
 
-<meta name="date" content="2021-11-23" />
+<meta name="date" content="2021-11-24" />
 
 <title>Replication of “On the Precipice of a ‘Majority-Minority’ America: Perceived Status Threat From the Racial Demographic Shift Affects White Americans’ Political Ideology” by Craig &amp; Richeson (2014, Psychological Science)</title>
 
@@ -249,7 +249,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Replication of “On the Precipice of a ‘Majority-Minority’ America: Perceived Status Threat From the Racial Demographic Shift Affects White Americans’ Political Ideology” by Craig &amp; Richeson (2014, Psychological Science)</h1>
 <h4 class="author">Stacia King (<a href="mailto:staciak@stanford.edu" class="email">staciak@stanford.edu</a>)</h4>
-<h4 class="date">November 23, 2021</h4>
+<h4 class="date">November 24, 2021</h4>
 
 </div>
 
@@ -407,14 +407,25 @@ qualtricsData &lt;- fetch_survey(surveyID = &quot;SV_bdaehc8gdxxRGJ0&quot;, forc
 ## )
 ## i Use `spec()` for the full column specifications.</code></pre>
 <pre><code>## Warning in file.remove(survey.fpath): cannot remove file &#39;C:/Users/staci/
-## AppData/Local/Temp/RtmpuaN8Di/Exact Replication Project.csv&#39;, reason &#39;Permission
+## AppData/Local/Temp/RtmpYJkwWR/Exact Replication Project.csv&#39;, reason &#39;Permission
 ## denied&#39;</code></pre>
 <pre class="r"><code>## Save Data to computer
 write_csv(qualtricsData, &quot;./newData/qualtricsData.csv&quot;)
 
-#### Data exclusion / filtering
+#### Data exclusion / filtering - aka keep if true
 filteredData = qualtricsData %&gt;% 
-  filter(Consent == &quot;1&quot;, Race1_3 == &quot;1&quot;, Citizen == &quot;1&quot;, primeRepeat != &quot;1&quot;)
+  filter(
+    Consent == &quot;1&quot;,     # Accept
+    Race1_3 == &quot;1&quot;,     # Marked White
+    Citizen == &quot;1&quot;,     # US Citizen
+    primeRepeat != &quot;1&quot;, # Hasn&#39;t read stimuli before
+    groupGrowth == &quot;4&quot; || is.na(groupGrowth),     #All following are attention checks
+    whitePopChange != &quot;1&quot; || whitePopChange != &quot;2&quot; || is.na(whitePopChange), 
+    !(Condition == &quot;Status Threat&quot; &amp; groupPower == &quot;1&quot;), 
+    !(Condition == &quot;Assuaged Threat&quot; &amp; groupPower == &quot;2&quot;),
+    !(Condition == &quot;Control&quot; &amp; groupMove == &quot;1&quot;),
+    areaGrowth == &quot;2&quot; || is.na(areaGrowth)
+    )
 
 #### Prepare data for analysis - create columns etc.
 cleanedData = filteredData %&gt;%

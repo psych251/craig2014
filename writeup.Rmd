@@ -132,9 +132,20 @@ qualtricsData <- fetch_survey(surveyID = "SV_bdaehc8gdxxRGJ0", force_request = T
 ## Save Data to computer
 write_csv(qualtricsData, "./newData/qualtricsData.csv")
 
-#### Data exclusion / filtering
+#### Data exclusion / filtering - aka keep if true
 filteredData = qualtricsData %>% 
-  filter(Consent == "1", Race1_3 == "1", Citizen == "1", primeRepeat != "1")
+  filter(
+    Consent == "1",     # Accept
+    Race1_3 == "1",     # Marked White
+    Citizen == "1",     # US Citizen
+    primeRepeat != "1", # Hasn't read stimuli before
+    groupGrowth == "4" || is.na(groupGrowth),     #All following are attention checks
+    whitePopChange != "1" || whitePopChange != "2" || is.na(whitePopChange), 
+    !(Condition == "Status Threat" & groupPower == "1"), 
+    !(Condition == "Assuaged Threat" & groupPower == "2"),
+    !(Condition == "Control" & groupMove == "1"),
+    areaGrowth == "2" || is.na(areaGrowth)
+    )
 
 #### Prepare data for analysis - create columns etc.
 cleanedData = filteredData %>%
