@@ -110,7 +110,7 @@ You can comment this section out prior to final report with data collection.
 
 Data preparation following the analysis plan.
 	
-```{r include=T}
+```{r include=T, warning=FALSE}
 ###Data Preparation
 
 ####Load Relevant Libraries and Functions
@@ -127,7 +127,7 @@ library(lsr) #For calculating partial eta squared
 
 #### Import data
 
-qualtricsData <- fetch_survey(surveyID = "SV_bdaehc8gdxxRGJ0", force_request = T, label = FALSE, convert = FALSE, start_date = "2021-11-11" )
+qualtricsData <- fetch_survey(surveyID = "SV_bdaehc8gdxxRGJ0", force_request = T, label = FALSE, convert = FALSE, start_date = "2021-11-24" )
 
 ## Save Data to computer
 write_csv(qualtricsData, "./newData/qualtricsData.csv")
@@ -192,7 +192,8 @@ cleanedData %>%
   summarise(meanCScore = mean(conservativeScore), sdCScore = sd(conservativeScore))
 
 ## Visualize Data
-boxplot(conservativeScore ~ Condition, data = cleanedData, main = "Score by Condition", xlab = "Condition", ylab = "Conservative Score")
+#boxplot(conservativeScore ~ Condition, data = cleanedData, main = "Score by Condition", xlab = "Condition", ylab = "Conservative Score")
+
 
 ## Check Assumptions
 
@@ -213,15 +214,15 @@ summary(educationModel)
 
 "2. Verify the variances among the groups are not equal"
 
-leveneTest(conservativeScore ~ Condition, data = cleanedData)
+#leveneTest(conservativeScore ~ Condition, data = cleanedData)
 
 ## Run ANCOVA Analysis
 
-ancovaModel <- aov(conservativeScore ~ Condition + Age + BaselineIdeo + Gender1  + Education, data = cleanedData)
-Anova(ancovaModel, type="III")
+#ancovaModel <- aov(conservativeScore ~ Condition + Age + BaselineIdeo + Gender1  + Education, data = cleanedData)
+#Anova(ancovaModel, type="III")
 
 #Calculate partial eta squared
-etaSquared(ancovaModel)
+#etaSquared(ancovaModel)
 ```
 
 
@@ -229,7 +230,7 @@ etaSquared(ancovaModel)
 
 There is no original graph.
 
-###Exploratory analyses
+### Exploratory analyses
 
 Any follow-up analyses desired (not required).  
 
